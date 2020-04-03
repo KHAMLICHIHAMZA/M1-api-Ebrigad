@@ -39,6 +39,27 @@ class User extends Authenticatable
         $stmt=null;
     }
 
+    //Modification d'un utilisateur sur la BDD
+    static public function update($pompier)
+    {
+        $stmt=DB::table('pompier')->where('P_ID',$pompier['id'])->update([
+            `P_NOM`=> $pompier['nom'],
+            `P_PRENOM`=> $pompier['prenom'],
+            `P_SEXE`=> $pompier['sexe'],
+            `P_GRADE`=> $pompier['grade'],
+            `P_PROFESSION`=> $pompier['profession'],
+            `P_STATUT`=> $pompier['status'],
+            `P_EMAIL`=> $pompier['email']
+            //$_POST['name'] => $_POST['content'],
+            //$_POST['title'] => $_POST['titleMsg']
+        ]);
+        //Execution de la requette
+        $stmt->execute();
+        //Fermeture et Initialisation du curseur
+        $stmt->close;
+        $stmt = null;
+    }
+   
     use Notifiable;
 
     /**

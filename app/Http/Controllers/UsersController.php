@@ -25,4 +25,24 @@ class usersController extends Controller
         $response = User::getPompierByID($P_ID);
         return  json_encode($response);
     }
+
+     //Modification d'un utilisateur 
+     static public function update()
+     {
+        $pompier= array("nom"=>$_POST['nom'],
+                    "prenom"=>$_POST['prenom'],
+                    "email"=>$_POST['email'],
+                    "sexe"=>$_POST['sexe'],
+                    "grade"=>$_POST['grade'],
+                    "profession"=>$_POST['profession'],
+                    "status"=>$_POST['status_'],
+                    "id"=>$_POST['P_ID'] );
+         
+        $result =User::up($pompier);
+         if($result == 'ok')
+         {
+             header('Location: localhost/home');
+         }    
+     }
+ 
 }

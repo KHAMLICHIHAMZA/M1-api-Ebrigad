@@ -17,10 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//
 Route::get('/TypeInterventions', 'TypeInterventionsController@getAllTypes')->name('AllTypes');
+//
 Route::get('/Engins', 'EnginsController@getAllEngins')->name('AllEngins');
 Route::get('/RolesEngins', 'EnginsController@getAllRolesEngins')->name('AllRolesEngins');
 Route::get('/Engin/{TvLibelle}', 'EnginsController@getEngin')->name('getCodeEngin');
+//
 Route::get('/NamesRolesEngin/{TvCode}', 'EnginsController@getRolesEngin')->name('getNamesRolesEngin');
 
 Route::get('/Users', 'UsersController@getAllUser')->name('AllUsers');
