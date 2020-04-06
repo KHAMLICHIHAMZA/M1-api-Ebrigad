@@ -20,7 +20,11 @@ class Engin extends Model
     {
         //$stmt=DB::connect()->prepare('SELECT * FROM  type_vehicule_role WHERE TV_CODE ="'.$i.'"');
         //$stmt->execute();
-        $stmt = DB::table('type_vehicule_role')->select()->where('TV_CODE',$i)->get();
+        //echo $i;
+        //die($i);
+        $stmt = DB::table('type_vehicule_role')->select('ROLE_NAME')->where('TV_CODE',$i)->get();
+        //$stmt1->bindParam(":TV_CODE",$i);
+        //die(json_encode($stmt));
         return $stmt;
         $stmt->closeCursor();
         $stmt=null;

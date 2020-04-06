@@ -17,7 +17,6 @@ class EnginsController extends Controller
     static public function getAllRolesEngins(){
         $Role=array();
         $response = Engin::getEngins();
-
         foreach($response as $e){
             $Var= Engin::getRoleEngins($e->TV_CODE);
             array_push($Role, $Var);
@@ -32,12 +31,13 @@ class EnginsController extends Controller
         return json_encode($response,true);
     }
 
-
+    //Recuperation des postes de chaque engin de la BDD
     static public function getRolesEngin($TV_CODE){
-        $Role=array();
         $response = Engin::getRoleEngins($TV_CODE);
+        //die($response);
+        $Role=array();
         foreach($response as $e){
-            array_push($Role, $e->ROLE_NAME);
+          array_push($Role, $e);
         }
         return json_encode($Role,true);
     }
