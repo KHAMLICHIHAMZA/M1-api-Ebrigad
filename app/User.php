@@ -40,8 +40,9 @@ class User extends Authenticatable
     }
 
     //Modification d'un utilisateur sur la BDD
-    static public function update($pompier)
+    static public function up($pompier)
     {
+
         $stmt=DB::table('pompier')->where('P_ID',$pompier['id'])->update([
             `P_NOM`=> $pompier['nom'],
             `P_PRENOM`=> $pompier['prenom'],
@@ -50,6 +51,7 @@ class User extends Authenticatable
             `P_PROFESSION`=> $pompier['profession'],
             `P_STATUT`=> $pompier['status'],
             `P_EMAIL`=> $pompier['email']
+
             //$_POST['name'] => $_POST['content'],
             //$_POST['title'] => $_POST['titleMsg']
         ]);
@@ -58,8 +60,8 @@ class User extends Authenticatable
         //Fermeture et Initialisation du curseur
         $stmt->close;
         $stmt = null;
+
     }
-   
     use Notifiable;
 
     /**

@@ -26,23 +26,64 @@ class usersController extends Controller
         return  json_encode($response);
     }
 
-     //Modification d'un utilisateur 
+     //Modification d'un utilisateur
      static public function update()
      {
-        $pompier= array("nom"=>$_POST['nom'],
-                    "prenom"=>$_POST['prenom'],
-                    "email"=>$_POST['email'],
-                    "sexe"=>$_POST['sexe'],
-                    "grade"=>$_POST['grade'],
-                    "profession"=>$_POST['profession'],
-                    "status"=>$_POST['status_'],
-                    "id"=>$_POST['P_ID'] );
+          
+        dd('dddddd');
+
+            $id=$_POST['post']['P_ID'];
+            $nom=$_POST['post']['P_NOM'];
+            $prenom=$_POST['post']['P_PRENOM'];
+            $email=$_POST['post']['P_EMAIL'];
+            $sexe=$_POST['post']['P_SEXE_'];
+            $grade=$_POST['post']['P_GRADE'];
+            $profession=$_POST['post']['P_PROFESSION'];
+            $status=$_POST['post']['P_STATUT_'];
+            $pompier= array("nom"=>$nom,
+                         "prenom"=>$prenom,
+                         "email"=>$email,
+                         "sexe"=>$sexe,
+                         "grade"=>$grade,
+                         "profession"=>$profession,
+                         "status"=>$status,
+                         "id"=>$id
+   );
+        
+      
+
+$result =User::up($pompier);
+
+
+
+        
+         /*
+
          
+            if(isset($_POST))
+            {
+            dd($_POST);
+
+
+            }
+        $pompier= array("nom"=>$_POST['nom'],
+                        "prenom"=>$_POST['prenom'],
+                        "email"=>$_POST['email'],
+                        "sexe"=>$_POST['sexe'],
+                        "grade"=>$_POST['grade'],
+                        "profession"=>$_POST['profession'],
+                        "status"=>$_POST['status_'],
+                        "id"=>$_POST['P_ID'] );
+
         $result =User::up($pompier);
          if($result == 'ok')
          {
              header('Location: localhost/home');
-         }    
+         }
+
+         */
+
      }
- 
+     
+
 }
