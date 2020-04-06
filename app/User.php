@@ -39,6 +39,17 @@ class User extends Authenticatable
         $stmt=null;
     }
 
+
+    static public function deletePompierByID($P_ID)
+    {
+        //$stmt=DB::connect()->prepare('SELECT * FROM pompier WHERE P_CODE LIKE :P_CODE');
+        $stmt=DB::table('pompier')->select()->where('P_ID',$P_ID)->delete();
+        //$stmt->bindParam(':P_CODE',$P_CODE);
+        return $stmt;
+        $stmt->close();
+        $stmt=null;
+    }
+
     //Modification d'un utilisateur sur la BDD
     static public function up($pompier)
     {

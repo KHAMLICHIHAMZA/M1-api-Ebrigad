@@ -30,6 +30,8 @@ Route::get('/Users', 'UsersController@getAllUser')->name('AllUsers');
 Route::get('/Users/FindByLogin/{PCODE}', 'UsersController@FindUserByLogin')->name('FindUserByLogin');
 Route::get('/Users/FindByID/{PID}', 'UsersController@FindUserByID')->name('FindUserByID');
 
+Route::get('/Users/DestroyByID/{PID}', 'UsersController@delete')->name('delete');
+
 Route::get('/Users/update', 'UsersController@update')->name('update');
 
 Route::put('users/{id}', function ($id) {

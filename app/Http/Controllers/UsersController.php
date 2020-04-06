@@ -26,6 +26,11 @@ class usersController extends Controller
         return  json_encode($response);
     }
 
+    static public function delete($P_ID){
+        $response = User::deletePompierByID($P_ID);
+        return  json_encode($response);
+    }
+
      //Modification d'un utilisateur
      static public function update()
      {
