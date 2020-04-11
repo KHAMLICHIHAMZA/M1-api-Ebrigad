@@ -2,11 +2,11 @@
 
 <p align="center">
     
-<h1>Gestion d'interventions</h1>
+<h1>API pour la gestion des interventions</h1>
 
 ## About Project
 
-Réalisation d'une API pour L'applcation de la gestion des intervention du  sdis 68
+Réalisation d'une API pour L'application de la gestion des intervention du  sdis 68
 
 </p>
 
