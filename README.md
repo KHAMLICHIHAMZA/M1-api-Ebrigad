@@ -12,6 +12,7 @@ L'Api developper est destinee pour l'application eBrigade Mulhouse donner a l'ap
     -Etape 2: Installation de la BDD eBrigade sur le serveur.
     -Etape 3: Lancement de l'application et l'installation du composer avec la commande: composer install
     -Etape 4: Modification du fichier .env pour etablir la liaison avec la BDD creer
+    -Etape 5: Lancement du projet sur le port 8002 avec la commande php artisan serve --port=8002
 
 </p>
 
