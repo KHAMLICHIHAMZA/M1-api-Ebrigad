@@ -7,11 +7,11 @@
 ## About Project
 ######### API destiner a L'application de la gestion des intervention du  sdis 68 #########
 
-L'Api developper est destinee pour l'application eBrigade Mulhouse donner a l'application eBrigade toute les fonctionnalite necessaire pour un bon fonctionnementet pour cela il va falloir suivre les etapes d'installation :
-    -Etape 1: Telechargement de l'application ou cloner l'url : https://github.com/KHAMLICHIHAMZA/M1-api-Ebrigad.git sur le serveur.
-    -Etape 2: Installation de la BDD eBrigade sur le serveur.
-    -Etape 3: Lancement de l'application et l'installation du composer avec la commande: composer install
-    -Etape 4: Modification du fichier .env pour etablir la liaison avec la BDD creer
+L'Api developper est destinee pour l'application eBrigade Mulhouse donner a l'application eBrigade toute les fonctionnalite necessaire pour un bon fonctionnementet pour cela il va falloir suivre les etapes d'installation :</br>
+    -Etape 1: Telechargement de l'application ou cloner l'url : https://github.com/KHAMLICHIHAMZA/M1-api-Ebrigad.git sur le serveur. </br>
+    -Etape 2: Installation de la BDD eBrigade sur le serveur. </br>
+    -Etape 3: Lancement de l'application et l'installation du composer avec la commande: composer install </br>
+    -Etape 4: Modification du fichier .env pour etablir la liaison avec la BDD creer </br>
     -Etape 5: Lancement du projet sur le port 8002 avec la commande php artisan serve --port=8002
 
 </p>
